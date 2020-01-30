@@ -17,8 +17,8 @@ COPY files/sshd_config /etc/ssh/sshd_config
 COPY files/create-sftp-user /usr/local/bin/
 COPY files/entrypoint /
 
-RUN systemctl start fail2ban
-RUN systemctl enable fail2ban
+#RUN systemctl start fail2ban
+#RUN systemctl enable fail2ban
 
 EXPOSE 22
 
