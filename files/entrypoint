@@ -88,8 +88,10 @@ fi
 
 if $startSshd; then
     log "Executing sshd"
+    service fail2ban start
     exec /usr/sbin/sshd -D -e
 else
     log "Executing $*"
+    service fail2ban start
     exec "$@"
 fi
